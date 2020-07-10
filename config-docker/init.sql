@@ -1,0 +1,3 @@
+CREATE USER dbuser;
+ALTER USER dbuser WITH SUPERUSER;
+ALTER ROLE dbuser WITH PASSWORD 'dbpassword';

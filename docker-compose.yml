@@ -1,0 +1,26 @@
+version: '3.4'
+services:
+ db:
+  image: postgres:12.3
+  volumes:
+   - ./tmp/db:/var/lib/postgresql/data
+   - ./config-docker/init.sql:/docker-entrypoint-initdb.d/init.sql
+  environment:
+    POSTGRES_PASSWORD: postgres
+  ports:
+   - "5432:5432"
+ redis:
+  image: redis:6.0.5
+ web:
+  build: .
+  command: bundle exec rails s -p 3000 -b '0.0.0.0'
+  volumes:
+   - .:/app
+  ports:
+   - "3000:3000"
+  depends_on:
+   - db
+   - redis
+  env_file: .env
+  environment:
+    RAILS_ENV: development
