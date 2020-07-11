@@ -15,8 +15,8 @@ This is a minimal example for a Dockerized Rails project with the following tech
 * Clone repo
 * Create a `.env` from `.env.sample`
 * Configure database `config-docker/init.sql` to be consistent with .env
-* `$ docker-compose up`
-* Once web and db images come up `$ docker-compose exec web bundle exec rake db:setup db:migrate`
+* `$ docker-compose up` (-d to begin build in background)
+* Once images to come online run `$ docker-compose exec web bundle exec rake db:setup db:migrate` to initialize your virtual database.
 * Navigate to http://localhost:3000/ and confirm you see `Rails version: 6.0.3.2` and `Ruby version: ruby 2.7.1p83`
 
 ## Links
