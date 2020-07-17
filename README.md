@@ -23,5 +23,6 @@ This is a minimal example for a Dockerized Rails project with the following tech
 * https://digitalocean.com/community/tutorials/containerizing-a-ruby-on-rails-application-for-development-with-docker-compose
 * https://gorails.com/setup/ubuntu/20.04
 * https://guides.rubyonrails.org/getting_started.html
+* https://github.com/ledermann/docker-rails (More complete and robust than this repo, similar functionality)
 
 These pages were helpful guides on getting setup. Thank you to the respective authors.
