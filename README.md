@@ -3,8 +3,8 @@
 Created on Ubuntu 20.04
 
 This is a minimal example for a Dockerized Rails project with the following technologies
-* Ruby 6.0.3.2
-* Rails 2.7.1
+* Ruby 2.7.1
+* Rails 6.0.3.2
 * PostgreSQL 12.3
 * Redis 6.0.5
 * docker-compose 1.26.2
