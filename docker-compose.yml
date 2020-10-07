@@ -1,7 +1,7 @@
-version: '3.4'
+version: '3.8'
 services:
  db:
-  image: postgres:12.3
+  image: postgres:13.0
   volumes:
    - ./tmp/db:/var/lib/postgresql/data
    - ./config-docker/init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -10,7 +10,7 @@ services:
   ports:
    - "5432:5432"
  redis:
-  image: redis:6.0.5
+  image: redis:6.0.8
  web:
   build: .
   command: bundle exec rails s -p 3000 -b '0.0.0.0'
