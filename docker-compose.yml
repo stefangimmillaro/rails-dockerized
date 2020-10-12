@@ -21,6 +21,6 @@ services:
   depends_on:
    - db
    - redis
-  env_file: .env
+  env_file: .env.docker
   environment:
     RAILS_ENV: development
